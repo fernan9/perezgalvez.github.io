@@ -2,22 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Fernan Rodrigo Pérez-Gálvez</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f4f4f4;
+      background: white url('mezquite-blur.jpg') no-repeat center center;
+      background-size: cover;
+      font-family: serif;
+      margin: 0;
+      background-color: #f8f9fa;
       color: #333;
       text-align: center;
-      padding: 2em;
+      padding: 2em 1em; /* <-- reduce horizontal padding para pantallas pequeñas */
     }
     .card {
       background: white;
       padding: 2em;
       margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
     }
     h1 {
       margin-bottom: 0.2em;
@@ -41,24 +45,50 @@
     .links a:hover {
       background: #00796b;
     }
+
+    .cv-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin: 1em auto;
+      flex-wrap: wrap; /* por si es móvil, que se acomoden vertical */
+    }
+
+    .cv-buttons a {
+      flex: 1 1 auto;
+      padding: 0.6em 0.8em;
+      text-align: center;
+      background: #00695c;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      max-width: 140px;
+    }
+
+    .cv-buttons a:hover {
+      background: #009688;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="autoretrato-abril.2025.jpg" alt="Hoy es un buen día." width="200" style="border-radius: 30%;">
+    <img src="autoretrato-abril.2025.jpg" alt="Hoy es un buen día." style="width: 60%; max-width: 200px; border-radius: 30%;">
     <h1>Dr. Fernan R. Pérez-Gálvez</h1>
-    <p>Especialista en biotecnología y control genético de plagas</p>
+    <p>Biotecnología y control genético de plagas</p>
 
 
     <div class="links">
-      <a href="https://orcid.org/0000-0001-9620-9025" target="_blank">ORCID</a>
+      <a href="https://www.youtube.com/watch?v=GLllZ-qiXJA&t=3s" target="_blank">TED-Ed: ¿De verdad necesitamos pesticidas?</a>
       <a href="https://www.researchgate.net/profile/Fernan-Perez-Galvez" target="_blank">ResearchGate</a>
       <a href="https://www.linkedin.com/in/fernan-rodrigo-perezgalvez/" target="_blank">LinkedIn</a>
       <a href="https://github.com/fernan9/" target="_blank">GitHub</a>
-      <a href="Fperez-CV.pdf" target="_blank">Currículum Vitae ENG (PDF)</a>
-      <a href="PerezGalvez_CV_espannol-2.pdf" target="_blank">Currículum Vitae ES (PDF)</a>
+      <div class="cv-buttons">
+        <a href="PerezGalvez_CV_espannol-2.pdf" target="_blank" rel="noopener noreferrer">CV Español</a>
+        <a href="Fperez-CV.pdf" target="_blank" rel="noopener noreferrer">CV English</a>
+      </div>
     </div>
-    <img src="qr-tarjetavirtual.png" alt="Código QR de la tarjeta" width="150">
+    <img src="qr-tarjetavirtual.png" alt="Código QR de la tarjeta" style="width: 40%; max-width: 150px; margin-top: 1em;">
   </div>
 </body>
 </html>
